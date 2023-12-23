@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="max-w-xl my-24 mx-auto bg-gray-400 shadow-2xl rounded-lg">
+    <div class="bg-[#14213d] text-white p-12 rounded-t-lg">
+      <h3 class="mt-0 mb-8 text-2xl font-bold">Loan Calculator</h3>
+
+      <form class="flex gap-2 justify-between">
+        <div class="group">
+          <div class="mb-2">Amount</div>
+          <input type="text" value="10000" class="loan-amount text-black px-2 w-[100%]">
+        </div>
+
+        <div class="group">
+          <div class="mb-2">Interest Rate</div>
+          <input type="text" value="3.5" class="interest-rate text-black px-2 w-[100%]">
+        </div>
+
+        <div class="group">
+          <div class="mb-2">Tenure (in months)</div>
+          <input type="text" value="120" class="loan-tenure text-black px-2 w-[100%]">
+        </div>
+
+        
+      </form>
+    </div>
+
+
+    <div class="flex justify-between items-center">
+      <div class="w-[100%] py-2 px-8">
+        <div class="loan-emi">
+          <h3 class="text-base mb-2 font-medium">Loan EMI</h3>
+          <div class="value relative before:content-['$'] before:text-xl before:font-normal before:mr-2 before:opacity-40 text-3xl font-bold pb-2.5 border-b">123</div>
+        </div>
+
+        <div class="total-interest text-base mb-2 font-medium">
+          <h3>Total Interest Payable</h3>
+          <div class="value relative before:content-['$'] before:text-xl before:font-normal before:mr-2 before:opacity-40 text-3xl font-bold pb-2.5 border-b">1234</div>
+        </div>
+
+        <div class="total-amount text-base mb-2 font-medium">
+          <h3>Total Amount</h3>
+          <div class="value relative before:content-['$'] before:text-xl before:font-normal before:mr-2 before:opacity-40 text-3xl font-bold pb-2.5 border-b">12345</div>
+        </div>
+
+        <button class="cal-btn bg-orange-600 mt-6 mb-8 mx-0 pointer border-none rounded-full py-2 px-6 text-white text-xl font-bold">Calculate</button>
+      </div>
+
+
+      <div class="right w-[50%]">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="index.js"></script>
+</body>
+</html>
